@@ -14,12 +14,12 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "novafabrica-capistrano"
-  gem.homepage = "http://github.com/FotoVerite/novafabrica-capistrano"
+  gem.name = "capistrano-novafabrica"
+  gem.homepage = "http://github.com/FotoVerite/capistrano-novafabrica"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "mzbphoto@gmail.com"
+  gem.summary = "Novafabrica capistrano recipies"
+  gem.description = "Novafabrica capistrano recipies"
+  gem.email = "matt@novafabric.com"
   gem.authors = ["Matthew Bergman"]
   # dependencies defined in Gemfile
 end
@@ -47,7 +47,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "novafabrica-capistrano #{version}"
+  rdoc.title = "capistrano-novafabrica #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
