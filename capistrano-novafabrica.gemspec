@@ -17,12 +17,21 @@ Gem::Specification.new do |s|
     "README.rdoc"
   ]
   s.files = [
+    ".DS_Store",
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
-    "VERSION"
+    "VERSION",
+    "capistrano-novafabrica.gemspec",
+    "lib/capistrano/novafabrica/base.rb",
+    "lib/capistrano/novafabrica/database.rb",
+    "lib/capistrano/novafabrica/dj.rb",
+    "lib/capistrano/novafabrica/helper.rb",
+    "lib/capistrano/novafabrica/solr.rb",
+    "lib/capistrano/novafabrica/tomcat.rb"
   ]
   s.homepage = "http://github.com/FotoVerite/capistrano-novafabrica"
   s.licenses = ["MIT"]

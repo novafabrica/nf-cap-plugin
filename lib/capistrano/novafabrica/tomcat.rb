@@ -8,8 +8,8 @@ configuration.load do
   
   after "deploy:update_code", "tomcat:restart"
   
-  c_set :tomcat_home, "/opt/tomcat6/"
-  c_set :tomcat_ctrl, "/etc/init.d/tomcat6"
+  _cset :tomcat_home, "/opt/tomcat6/"
+  _cset :tomcat_ctrl, "/etc/init.d/tomcat6"
 
   namespace :tomcat do
 
