@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "capistrano-novafabrica"
   gem.homepage = "http://github.com/FotoVerite/capistrano-novafabrica"
   gem.license = "MIT"
-  gem.summary = "Novafabrica capistrano recipies"
-  gem.description = "Novafabrica capistrano recipies"
+  gem.summary = "Nova Fabrica Capistrano recipies"
+  gem.description = "Nova Fabrica Capistrano recipies"
   gem.email = "matt@novafabric.com"
   gem.authors = ["Matthew Bergman"]
   # dependencies defined in Gemfile
