@@ -48,10 +48,13 @@ configuration.load do
 
       run "ln -nfs #{shared_path}/config/database.yml #{latest_release}/config/database.yml"
 
-      symlinks.each do |type, dir|
-        run "mkdir -p  #{shared_path}/public/#{type}/#{dir}"
-        run "rm -rf #{latest_release}/public/#{type}/#{dir}"
-        run "ln -nfs #{shared_path}/public/#{type}/#{dir} #{latest_release}/public/#{type}/#{dir}"
+      symlinks.each do |type, value|
+        directories = value.is_a?(Array) ? value : [value]
+        directories.each do |dir|
+          run "mkdir -p  #{shared_path}/public/#{type}/#{dir}"
+          run "rm -rf #{latest_release}/public/#{type}/#{dir}"
+          run "ln -nfs #{shared_path}/public/#{type}/#{dir} #{latest_release}/public/#{type}/#{dir}"
+        end
       end
 
     end
