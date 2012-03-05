@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{capistrano-novafabrica}
-  s.version = "1.0.1"
+  s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Matthew Bergman"]
-  s.date = %q{2011-12-06}
+  s.authors = ["Matthew Bergman", "Kevin Skoglund"]
+  s.date = %q{2012-03-05}
   s.description = %q{Nova Fabrica Capistrano recipies}
   s.email = %q{matt@novafabric.com}
   s.extra_rdoc_files = [
@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/FotoVerite/capistrano-novafabrica}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.0}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{Nova Fabrica Capistrano recipies}
 
   if s.respond_to? :specification_version then

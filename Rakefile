@@ -20,7 +20,7 @@ Jeweler::Tasks.new do |gem|
   gem.summary = "Nova Fabrica Capistrano recipies"
   gem.description = "Nova Fabrica Capistrano recipies"
   gem.email = "matt@novafabric.com"
-  gem.authors = ["Matthew Bergman"]
+  gem.authors = ["Matthew Bergman", "Kevin Skoglund"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
