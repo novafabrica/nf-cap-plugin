@@ -22,10 +22,9 @@ configuration.load do
       "#{unicorn_ctrl} stop"
     end
 
-    desc "stop and start unicorn"
+    desc "restart unicorn"
     task :restart do
-      tomcat.stop
-      tomcat.start
+      "#{unicorn_ctrl} restart"
     end
 
     desc "tail :current_path/log/unicorn.stderr.log"
