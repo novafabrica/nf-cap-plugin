@@ -14,17 +14,17 @@ configuration.load do
 
     desc "start unicorn"
     task :start do
-      "#{unicorn_ctrl} start"
+      run "#{unicorn_ctrl} start"
     end
 
     desc "stop unicorn"
     task :stop do
-      "#{unicorn_ctrl} stop"
+      run "#{unicorn_ctrl} stop"
     end
 
     desc "restart unicorn"
     task :restart do
-      "#{unicorn_ctrl} restart"
+      run "#{unicorn_ctrl} restart"
     end
 
     desc "tail :current_path/log/unicorn.stderr.log"
