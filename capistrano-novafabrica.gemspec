@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{capistrano-novafabrica}
-  s.version = "1.0.2"
+  s.name = "capistrano-novafabrica"
+  s.version = "1.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Bergman", "Kevin Skoglund"]
-  s.date = %q{2012-03-05}
-  s.description = %q{Nova Fabrica Capistrano recipies}
-  s.email = %q{matt@novafabric.com}
+  s.date = "2012-08-12"
+  s.description = "Nova Fabrica Capistrano recipies"
+  s.email = "matt@novafabric.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -33,13 +33,14 @@ Gem::Specification.new do |s|
     "lib/capistrano/novafabrica/dj.rb",
     "lib/capistrano/novafabrica/helper.rb",
     "lib/capistrano/novafabrica/solr.rb",
-    "lib/capistrano/novafabrica/tomcat.rb"
+    "lib/capistrano/novafabrica/tomcat.rb",
+    "lib/capistrano/novafabrica/unicorn.rb"
   ]
-  s.homepage = %q{http://github.com/FotoVerite/capistrano-novafabrica}
+  s.homepage = "http://github.com/FotoVerite/capistrano-novafabrica"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{Nova Fabrica Capistrano recipies}
+  s.rubygems_version = "1.8.21"
+  s.summary = "Nova Fabrica Capistrano recipies"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
