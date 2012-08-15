@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Matthew Bergman", "Kevin Skoglund"]
-  s.date = "2012-08-12"
+  s.date = "2012-08-15"
   s.description = "Nova Fabrica Capistrano recipies"
   s.email = "matt@novafabric.com"
   s.extra_rdoc_files = [
