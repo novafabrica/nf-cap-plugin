@@ -5,9 +5,9 @@ configuration = Capistrano::Configuration.respond_to?(:instance) ?
   Capistrano.configuration(:must_exist)
 
 configuration.load do
-  
-  after "deploy:update_code", "unicorn:restart"
-  
+
+  after "deploy:restart", "unicorn:restart"
+
   _cset :unicorn_ctrl, "/etc/init.d/unicorn"
 
   namespace :unicorn do
