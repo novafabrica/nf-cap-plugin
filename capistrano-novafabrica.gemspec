@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'nf/cap/plugin/version'
+require 'capistrano/novafabrica/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "nf-cap-plugin"
-  spec.version       = Nf::Cap::Plugin::VERSION
+  spec.name          = "capistrano-novafabrica"
+  spec.version       = Capistrano::NovaFabrica::VERSION
   spec.authors       = ["FotoVerite"]
-  spec.email         = ["mzbphoto@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.email         = ["matt@novafabrica.com"]
+  spec.description   = %q{Nova Fabrica Capistrano recipies}
+  spec.summary       = %q{Nova Fabrica Capistrano recipies}
+  spec.homepage      = "http://github.com/NovaFabrica/capistrano-novafabrica"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
