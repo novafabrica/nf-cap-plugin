@@ -1,4 +1,3 @@
-
 namespace :solr do
 
   desc "Solr Reindex"
@@ -12,4 +11,11 @@ namespace :solr do
     end
   end
 
+  after "deploy:finished", "solr:reindex"
+
+end
+
+namespace :load do
+  task :defaults do
+  end
 end
