@@ -30,14 +30,14 @@ namespace :unicorn do
   desc "tail :tail :current_path/log/unicorn.stderr.log"
   task :tail do
     on roles(:app) do
-      within current_release do
+      within release_path do
        execute :tail, "-f log/unicorn.stderr.log"
       end
     end
   end
 
 
-  after "deploy:finished", "tomcat:restart"
+  after "deploy:finished", "unicorn:restart"
 
 end
 
