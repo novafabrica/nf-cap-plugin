@@ -24,6 +24,4 @@
       stream "tail -f #{current_path}/log/unicorn.stderr.log"
     end
 
-  end
-
 end
