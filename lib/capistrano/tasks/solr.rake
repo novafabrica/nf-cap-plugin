@@ -11,8 +11,6 @@ namespace :solr do
     end
   end
 
-  after "deploy:finished", "solr:reindex"
-
 end
 
 namespace :load do
