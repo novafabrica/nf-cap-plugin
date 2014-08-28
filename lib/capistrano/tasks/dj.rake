@@ -27,13 +27,11 @@ namespace :dj do
     on roles(:app) do
       within release_path do
         with rails_env: (fetch(:rails_env) || fetch(:stage)) do
-        if test "[ -f #{shared_path}/bin/delayed_job ]"
-          execute :ruby, "bin/delayed_job stop"
-        else
-          execute :ruby, "script/delayed_job stop"
-        end
-        with rails_env: (fetch(:rails_env) || fetch(:stage)) do
-          execute :ruby, "script/delayed_job start"
+          if test "[ -f #{shared_path}/bin/delayed_job ]"
+            execute :ruby, "bin/delayed_job restart"
+          else
+            execute :ruby, "script/delayed_job restart"
+          end
         end
       end
     end
