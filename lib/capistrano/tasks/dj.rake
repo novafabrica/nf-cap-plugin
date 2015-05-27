@@ -1,20 +1,15 @@
 namespace :dj do
 
-  # In Rails 4 the delayed_job init script is moved into the bin directory.
-  def delayed_job_command
-    if test "[ -e #{current_path}/bin/delayed_job ]"
-      "bin/delayed_job"
-    else
-      "script/delayed_job"
-    end
-  end
-
   desc "Start delayed_job process"
   task :start do
     on roles(:app) do
       within release_path do
         with rails_env: (fetch(:rails_env) || fetch(:stage)) do
-          execute :ruby, "#{delayed_job_command} stop"
+          if test "[ -e #{current_path}/bin/delayed_job ]"
+            execute :ruby, "bin/delayed_job stop"
+          else
+            execute :ruby, "script/delayed_job stop"
+          end
         end
       end
     end
@@ -25,7 +20,11 @@ namespace :dj do
     on roles(:app) do
       within release_path do
         with rails_env: (fetch(:rails_env) || fetch(:stage)) do
-          execute :ruby, "#{delayed_job_command} start"
+          if test "[ -e #{current_path}/bin/delayed_job ]"
+            execute :ruby, "bin/delayed_job start"
+          else
+            execute :ruby, "script/delayed_job start"
+          end
         end
       end
     end
@@ -36,7 +35,11 @@ namespace :dj do
     on roles(:app) do
       within release_path do
         with rails_env: (fetch(:rails_env) || fetch(:stage)) do
-          execute :ruby, "#{delayed_job_command} restart"
+          if test "[ -e #{current_path}/bin/delayed_job ]"
+            execute :ruby, "bin/delayed_job restart"
+          else
+            execute :ruby, "script/delayed_job restart"
+          end
         end
       end
     end
